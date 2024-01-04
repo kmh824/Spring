@@ -1,9 +1,12 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
+
 import java.util.*;
 
 //구현체
+@Repository //@Repository 어노테이션은 스프링이 실행될 때 스프링 컨테이너에 리포지토리로 저장함.
 public class MemoryMemberRepository implements MemberRepository {
 
     //회원 <Id, Name>을 담을 수 있는 HashMap store 생성.
